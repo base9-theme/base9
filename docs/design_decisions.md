@@ -1,7 +1,19 @@
+## Why 9 colors
+A background and a foreground is a must.
+I surveyed a bunch of popular color schemes. Most of them has 7-8 hues.
+Examples:
+- gruvbox: 7
+- dracula: 7
+- solarized: 8
+- monokai: 6 (maybe, since it's close sourced)
+- one dark: does not fit in hue model
+
+
 ## Restrict variable names
 
 Have to match regex `[a-z][0-9a-z_]*`. This should support all names, but
 enable more flexible language binding.
+
 
 ## Centralized Template Repo
 
