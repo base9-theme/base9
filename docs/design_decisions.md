@@ -1,6 +1,12 @@
-## Why 9 colors
+# Design Decisions
+This doc cover the design decisions base9 made and why.
+Discussion welcomed through issues.
+
+## number of colors in palette
 A background and a foreground is a must.
+
 I surveyed a bunch of popular color schemes. Most of them has 7-8 hues.
+
 Examples:
 - gruvbox: 7
 - dracula: 7
@@ -8,10 +14,14 @@ Examples:
 - monokai: 6 (maybe, since it's close sourced)
 - one dark: does not fit in hue model
 
+It's pretty arbitrary. I chose 9, since is the average.
 
-## Restrict variable names
 
-Have to match regex `[a-z][0-9a-z_]*`. This should support all names, but
+## Restrict semantic names
+
+Restricting semantic names to regex `[a-z][0-9a-z_]*`.
+
+This should support all names, but
 enable more flexible language binding.
 
 

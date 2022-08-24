@@ -1,4 +1,4 @@
-## History and Vision
+# Vision
 
 Base9 wants to democratize color theme. It aims to let end users with little to no
 programming or color science knowledge to customize its favorite apps.
@@ -19,12 +19,10 @@ Base9 is heavily inspired by [base16](https://github.com/chriskempson/base16/tre
 But when I created base9, base16 was more or less stopped being maintained.
 
 FYI, there is another group of people also creating a spiritual successor of base16
-that has similarities with base9 and is in early active development
+that has similarities with base9 and is in early development
 (Check out [here](https://github.com/base16-project/home)).
 
 Base9 aims to address many problems that the original base16 has.
-
-
 
 ### Less but more choices
 A base9 theme plugin for any program does not contain bloats for hundreds of
@@ -57,7 +55,7 @@ programs that uses ANSI 256 color. When only ANSI 256 is supported, Base9 will
 try its best to display the best color without overriding it. (This is not
 implemented yet)
 
-## Centralized Community
+### Centralized Community
 Every implementation of base16
 is in it's own repository with its owner, it's very
 hard to make changes across all of them.
@@ -65,3 +63,23 @@ hard to make changes across all of them.
 Base9 has a centralized org. This allows Base9 to make
 improvements across all apps more quickly, and ensure all
 templates stays top quality.
+
+## Why base9 instead of themer.dev
+
+themer.dev is more similar to base16 than base9 dispite its name.
+
+The "Less but more colors", "Relative vs Absolute" sections above still applies
+as advantage over themer.dev.
+
+themer.dev makes different design choices in terms of installation method
+compared with base9.
+
+themer.dev is designed as a one stop shop for themes. It requires some setup and
+is restricted to use nodejs. But once setup, it is very powerful and automated.
+
+base9 tries to be flexible on how you install the theme.
+It tries to fit everyone's workflow.
+It also tries to make it as easy as posssible to try out base9 for one app.
+It uses mustache, which is can be run on many runtimes.
+Although, it is less expressive for
+theme development due to the limitation of mustache.

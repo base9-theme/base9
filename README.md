@@ -1,19 +1,35 @@
-# Base9
+# base9
+![discord](https://img.shields.io/discord/1001259743815409715?label=base9&logo=discord&style=flat-square)
 
 A system for generating themes for various apps using color science based on 9 colors that user prefers.
 
-It is a spiritual successor of [base16](https://github.com/chriskempson/base16), but offers better color theme and is more user friendly. For more info, see
-[history and vision](./history_and_vision.md)
+Go to https://base9-theme.github.io for guided setup.
 
-## How to use
+It is a spiritual successor of [base16](https://github.com/chriskempson/base16), but offers better color theme and is more user friendly. It is also inspired by [themer.dev](https://github.com/themerdev/themer).
+For more info, see
+[history and vision](./docs/history_and_vision.md)
 
-First, pick 9 colors, either by selecting from exist presets, or randomly generate them, or hand pick them by following [Color Palette Guide](/guide/color_palette).
+## How to it works
 
-Copy the base9 **palette** code, which is the `-` separated hex value of the 9 colors.
+Color theme are generated from the palette consist of 9 colors:
 
-Example: 
+Background, foreground and 7 additional colors in order of importance.
 
-`282936-E9E9F4-FF5555-FFB86C-F1FA8C-50FA7B-8BE9FD-BD93F9-FF79C6`
+[Base9 Bulder](https://github.com/base9-theme/base9-builder) will generate more colors based on the palette using color science.
+It will blend colors as necessary to create different shades, pick the red color for error, etc.
 
-Checkout [list of supported templates](https://github.com/base9-theme/base9-templates) to see how to apply it to each application.
+Lastly, it will generate theme files for specific apps using [mustache](http://mustache.github.io/).
 
+## Where code lives
+
+This repo only hosts the general base9 documentations.
+
+- [base9-builder](https://github.com/base9-theme/base9-builder) hosts the core logic.
+- [base9-templates](https://github.com/base9-theme/base9-templates) hosts
+the base9 templates (which is used to generate themes) for each supported apps.
+Although some more complicated templates are only referenced there
+and are hosted in separate repo.
+- [base9-theme.github.io](https://github.com/base9-theme/base9-theme.github.io) hosts the official website.
+
+## Contribute
+See [CONTRIBUTE.md](./CONTRIBUTE.md)
