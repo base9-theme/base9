@@ -3,7 +3,7 @@
 
 A system for generating themes for various apps using color science based on 9 colors that user prefers.
 
-Go to https://base9-theme.github.io for guided setup.
+Go to https://base9-theme.github.io for demo and guided setup.
 
 It is a spiritual successor of [base16](https://github.com/chriskempson/base16), but offers better color theme and is more user friendly. It is also inspired by [themer.dev](https://github.com/themerdev/themer).
 For more info, see
@@ -11,7 +11,7 @@ For more info, see
 
 ## How to it works
 
-Color theme are generated from the palette consist of 9 colors:
+Color theme are generated from a palette consisting of 9 colors:
 
 Background, foreground and 7 additional colors in order of importance.
 
