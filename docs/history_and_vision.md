@@ -9,7 +9,7 @@ using color science and programming.
 
 Base9 also aims to let user apply the designed theme to all programs easily.
 
-Without sacrificing such simplicity, Base9 also tries to provide limited, optional finer
+Without sacrificing such simplicity, Base9 will potentially provide limited, optional finer
 control for the theme generation for user who wants more control.
 
 ## Why base9 instead of base16 (the original one)

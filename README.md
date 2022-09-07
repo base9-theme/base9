@@ -1,4 +1,4 @@
-# base9
+# Base9
 [![discord](https://img.shields.io/discord/1001259743815409715?label=base9&logo=discord&style=flat-square)](https://discord.gg/xxSEwbvh)
 
 A system for generating themes for various apps using color science based on 9 colors that user prefers.

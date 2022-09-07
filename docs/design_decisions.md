@@ -1,5 +1,6 @@
 # Design Decisions
 This doc cover the design decisions base9 made and why.
+It is more focused for internal contributors, so the writing is less polished.
 Discussion welcomed through issues.
 
 ## number of colors in palette
@@ -14,7 +15,7 @@ Examples:
 - monokai: 6 (maybe, since it's close sourced)
 - one dark: does not fit in hue model
 
-It's pretty arbitrary. I chose 9, since is the average.
+It's pretty arbitrary. I chose 7 hues, since is the average.
 
 
 ## Restrict semantic names
@@ -51,10 +52,12 @@ Drawbacks:
 1. More than one purpose for one repo, harder to track issues and changes.
 2. README and other unrelated things will be in the repo.
 
-Decision: No
+Decision: Yes
 
 
-## Add variable in list form to enable themes.
+## Add variable in list form to enable more flexible theme.
+
+This is basically referring the "PROGRAMMABLE" mustache data variable.
 
 ### With this, vim theme would look like:
 
