@@ -1,0 +1,6 @@
+- name: grubbox
+  author: Pavel Pertsev
+  palette: 282828-ebdbb2-83a598-8ec07c-fabd2f-d3869b-b8bb26-fe8019-fb4934
+- name: dracula
+  author: dracula
+  palette: 282a36-f8f8f2-bd93f9-ff79c6-f1fa8c-50fa7b-8be9fd-ffb86c-ff5555

@@ -1,0 +1,3 @@
+[submodule "base9-templates"]
+	path = base9-templates
+	url = git@github.com:base9-theme/base9-templates.git
