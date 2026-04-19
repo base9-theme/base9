@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'base9-builder'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=base9-builder",
+                    "--package=base9-builder"
+                ],
+                "filter": {
+                    "name": "base9-builder",
+                    "kind": "bin"
+                }
+            },
+            "args": ["preview", "282828-ebdbb2-83a598-8ec07c-fe8019-fabd2f-b8bb26-d3869b-fb4934"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'base9-builder'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=base9-builder",
+                    "--package=base9-builder"
+                ],
+                "filter": {
+                    "name": "base9-builder",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

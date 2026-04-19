@@ -1,0 +1,170 @@
+# $schema: https://json-schema.org/draft/2020-12/schema
+type: object
+additionalProperties: false
+properties:
+  PALETTE:
+    type: string
+    pattern: ^[0-9a-fA-F]{6}(-[0-9a-fA-F]{6}){8}$
+    examples: [16161D-E0E5C8-CEAA7A-A6B2C1-CBA8B3-93BC95-DBA595-8AB9B2-B0B47A]
+  PROGRAMMABLE:
+    type: array
+    items:
+      type: object
+      additionalProperties: false
+      properties:
+        color:
+          $ref: formatted
+        path:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                pattern: ^[a-z][_0-9a-z]*$
+              first:
+                const: true
+                description: present in the first element of `path`
+              last:
+                const: true
+                description: present in the last element of `path`
+        begin:
+          const: true
+          description: present when marking beginning of an object
+        end:
+          const: true
+          description: present when marking end of an object
+  background: { $ref: formatted }
+  ansi:
+    type: object
+    additionalProperties: false
+    propertyNames:
+      enum:
+        - c0
+        - c1
+        - c2
+        - c3
+        - c4
+        - c5
+        - c6
+        - c7
+        - c8
+        - c9
+        - ca
+        - cb
+        - cc
+        - cd
+        - ce
+        - cf
+        - c10
+        - c11
+        - c12
+        - c13
+        - c14
+        - c15
+        - white
+        - red
+        - yellow
+        - green
+        - blue
+        - cyan
+        - magenta
+        - black
+        - bright_white
+        - bright_red
+        - bright_yellow
+        - bright_green
+        - bright_blue
+        - bright_cyan
+        - bright_magenta
+        - bright_black
+    patternProperties:
+      "": { $ref: formatted }
+  base9:
+    type: object
+    additionalProperties: false
+    propertyNames:
+      enum:
+        - c0
+        - c1
+        - c2
+        - c3
+        - c4
+        - c5
+        - c6
+        - c7
+        - c8
+    patternProperties:
+      "": { $ref: formatted }
+patternProperties:
+  ^(?!base9|ansi|background)([a-z][_0-9a-z]*)$:
+    description: any other name that is not base9, ansi or background
+    $ref: shaded
+$defs:
+  shaded:
+    $id: shaded
+    type: object
+    additionalProperties: false
+    properties:
+      p10: { $ref: formatted }
+      p25: { $ref: formatted }
+      p50: { $ref: formatted }
+      p75: { $ref: formatted }
+      p100: { $ref: formatted }
+      p125: { $ref: formatted }
+  formatted:
+    $id: formatted
+    type: object
+    additionalProperties: false
+    required: [hex, hex_r, hex_g, hex_b, int_r, int_g, int_b, dec_r, dec_g, dec_b]
+    properties:
+      hex:
+        type: string
+        pattern: ^[0-9a-z]{6}$
+        description: hex value
+        examples: [16161d]
+      hex_r:
+        type: string
+        pattern: ^[0-9a-z]{2}$
+        description: hex value of the red component, 00-FF
+        examples: ["0d"]
+      hex_g:
+        type: string
+        pattern: ^[0-9a-z]{2}$
+        description: hex value of the green component, 00-FF
+        examples: ["0d"]
+      hex_b:
+        type: string
+        pattern: ^[0-9a-z]{2}$
+        description: hex value of the blue component, 00-FF
+        examples: ["0d"]
+      int_r:
+        type: string
+        pattern: ^[0-9]+$
+        description: integer value of the red component, 0-255
+        examples: ["254"]
+      int_g:
+        type: string
+        pattern: ^[0-9]+$
+        description: integer value of the green component, 0-255
+        examples: ["254"]
+      int_b:
+        type: string
+        pattern: ^[0-9]+$
+        description: integer value of the blue component, 0-255
+        examples: ["254"]
+      dec_r:
+        type: string
+        pattern: ^((1(.0*)?)|0|(0.\d*))$
+        description: decimal value of the red component, 0-1
+        examples: ["0", "1", "0.22745098039215686"]
+      dec_g:
+        type: string
+        pattern: ^((1(.0*)?)|0|(0.\d*))$
+        description: decimal value of the green component, 0-1
+        examples: ["0", "1", "0.22745098039215686"]
+      dec_b:
+        type: string
+        pattern: ^((1(.0*)?)|0|(0.\d*))$
+        description: decimal value of the blue component, 0-1
+        examples: ["0", "1", "0.22745098039215686"]

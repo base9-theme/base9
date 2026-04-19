@@ -1,0 +1,39 @@
+export type Formatted = {
+    hex: string,
+    hex_r: string,
+    hex_g: string,
+    hex_b: string,
+    int_r: string,
+    int_g: string,
+    int_b: string,
+    dec_r: string,
+    dec_g: string,
+    dec_b: string,
+}
+
+type ProgrammableEntry = {
+    path: {
+        name: string,
+        first?: true,
+        last?: true,
+    }[],
+    color?: Formatted,
+    begin?: true,
+    end?: true,
+};
+
+export type Data = {
+    PALETTE: string,
+    PROGRAMMABLE: ProgrammableEntry[],
+} & Colors<Formatted>;
+
+{{=<% %>=}}
+export type Colors<T> = {
+<%#PROGRAMMABLE%><%!
+%><%#path%>  <%/path%><%!                                                 indent
+%><%#begin%><%#path%><%#last%><%name%>: {<%/last%><%/path%><%/begin%><%!  "name: {"
+%><%#color%><%#path%><%#last%><%name%>: T,<%/last%><%/path%><%/color%><%! "key: T,"
+%><%#end%>},<%/end%><%!                                                   "},"
+%>
+<%/PROGRAMMABLE%><%!
+%>};

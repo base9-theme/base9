@@ -1,0 +1,146 @@
+palette: "232323-f7f7f7-e9ff70-70d6ff-ff9770-ffd670-ffa0c5-9df87e-c79cff"
+# color_space: lab + contrast
+# todo: # TODO: how to generate todo colors?001153-cad1ea-f958a8-e3c0ae-97bda5-00b8dc-00abff-968dff-ee8394"
+absolute:
+  goal:
+    red: "#ff0000"
+    yellow: "#ffff00"
+    green: "#00ff00"
+    cyan: "#00ffff"
+    blue: "#0000ff"
+    magenta: "#ff00ff"
+shades:
+  p10: 0.1
+  p25: 0.25
+  p50: 0.5
+  p75: 0.75
+  p100: 1
+  p125: 1.25
+colors:
+  background: BUILT_IN
+  foreground: BUILT_IN
+  c1: BUILT_IN
+  c2: BUILT_IN
+  c3: BUILT_IN
+  c4: BUILT_IN
+  c5: BUILT_IN
+  c6: BUILT_IN
+  c7: BUILT_IN
+  red: BUILT_IN
+  green: BUILT_IN
+  yellow: BUILT_IN
+  blue: BUILT_IN
+  magenta: BUILT_IN
+  cyan: BUILT_IN
+  base9:
+    c0: background
+    c1: foreground.p100
+    c2: c1.p100
+    c3: c2.p100
+    c4: c3.p100
+    c5: c4.p100
+    c6: c5.p100
+    c7: c6.p100
+    c8: c7.p100
+  ansi:
+    black: background
+    red: red.p100
+    green: green.p100
+    yellow: yellow.p100
+    blue: blue.p100
+    magenta: magenta.p100
+    cyan: cyan.p100
+    white: foreground.p75
+    bright_black: foreground.p25
+    bright_red: red.p125
+    bright_green: green.p125
+    bright_yellow: yellow.p125
+    bright_blue: blue.p125
+    bright_magenta: magenta.p125
+    bright_cyan: cyan.p125
+    bright_white: foreground.p100
+    c0: background
+    c1: red.p100
+    c2: green.p100
+    c3: yellow.p100
+    c4: blue.p100
+    c5: magenta.p100
+    c6: cyan.p100
+    c7: foreground.p75
+    c8: foreground.p25
+    c9: red.p125
+
+    ca: green.p125
+    cb: yellow.p125
+    cc: blue.p125
+    cd: magenta.p125
+    ce: cyan.p125
+    cf: foreground.p100
+
+    c10: green.p125
+    c11: yellow.p125
+    c12: blue.p125
+    c13: magenta.p125
+    c14: cyan.p125
+    c15: foreground.p100
+  c0: foreground
+
+  # syntax highlighting
+
+  # constant-like
+  variable: foreground # local / static variable
+  constant: foreground
+
+  # title-like
+  static: c1
+  type: c1
+
+  keyword: c2
+  operator: c2
+
+  decorator: c2 # or tag
+
+  #quote
+  string: c3
+  property_value: c3
+
+  # other
+  field: c4 # aka instance variable
+  function: c4
+
+  keyword2: c5
+  literal: c5
+
+  parameter: c6
+
+  escape: c7
+
+  css:
+    element: c1
+    class: c2
+    # value: c3
+    # property: c4
+    id: c5
+    pseudo: c6
+
+  # UI
+  primary: c1 # main color in ui
+  secondary: c2 # need special attention, should be only for small portion of the ui.
+  selection: c1
+  comment: foreground
+  cursor: foreground
+  link: c1 # url or links in ui
+  highlight: c1 # Same as Secondary, for ui hovering and other types of highlight
+  match: c4 # search result
+  divider: foreground
+  scroll: foreground
+  line_number: foreground #
+  quote: c3 # Same as string. for displaying quotes in a document or ui context
+  fold: foreground # Something that can fold/expand, or a folder.
+  debug: c5 # anything related to debugging
+
+  # absolute
+  error: red
+  succeed: green
+  warning: yellow
+  info: blue
