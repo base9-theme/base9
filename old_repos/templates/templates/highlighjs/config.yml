@@ -1,0 +1,13 @@
+app:
+  name: highlight.js
+  link: https://highlightjs.org/
+type: library
+installation:
+- write_template: true
+  template: highlightjs/default.css.mustache
+  destination: base9-highlightjs.css
+
+  before_md: ""
+  after_md: |
+    include the generated css in the web page.
+

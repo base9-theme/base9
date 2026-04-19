@@ -1,0 +1,69 @@
+colors:
+  primary:
+    background: '#{{background.hex}}'
+    foreground: '#{{foreground.p100.hex}}'
+    dim_foreground: '#{{foreground.p75.hex}}'
+    bright_foreground: '#{{foreground.p125.hex}}'
+  cursor:
+    text: '#{{background.hex}}'
+    cursor: '#{{cursor.p100.hex}}'
+  vi_mode_cursor:
+    text: '#{{background.hex}}'
+    cursor: '#{{cursor.p100.hex}}'
+  search:
+    matches:
+      foreground: '#{{background.hex}}'
+      background: '#{{match.p75.hex}}'
+    focused_match:
+      foreground: '#{{background.hex}}'
+      background: '#{{match.p100.hex}}'
+    bar:
+      foreground: '#{{background.hex}}'
+      background: '#{{primary.p75.hex}}'
+  hints:
+    start:
+      foreground: '#{{background.hex}}'
+      background: '#{{secondary.p100.hex}}'
+    end:
+      foreground: '#{{background.hex}}'
+      background: '#{{secondary.p75.hex}}'
+  line_indicator:
+    foreground: '#{{background.hex}}'
+    background: '#{{primary.p75.hex}}'
+  selection:
+    text: '#{{background.hex}}'
+    background: '#{{selection.p75.hex}}'
+  # TODO(CONTRIB): Test and fix commented lines.
+  # footer_bar:
+  #   background: '#{{red.p75.hex}}'
+  #   foreground: '#{{red.p100.hex}}'
+
+{{#ansi}}
+  normal:
+    black: '#{{black.hex}}'
+    red: '#{{red.hex}}'
+    green: '#{{green.hex}}'
+    yellow: '#{{yellow.hex}}'
+    blue: '#{{blue.hex}}'
+    magenta: '#{{magenta.hex}}'
+    cyan: '#{{cyan.hex}}'
+    white: '#{{white.hex}}'
+  bright:
+    black: '#{{bright_black.hex}}'
+    red: '#{{bright_red.hex}}'
+    green: '#{{bright_green.hex}}'
+    yellow: '#{{bright_yellow.hex}}'
+    blue: '#{{bright_blue.hex}}'
+    magenta: '#{{bright_magenta.hex}}'
+    cyan: '#{{bright_cyan.hex}}'
+    white: '#{{bright_white.hex}}'
+{{/ansi}}
+  dim:
+    black: '#{{background.hex}}'
+    red: '#{{red.p75.hex}}'
+    green: '#{{green.p75.hex}}'
+    yellow: '#{{yellow.p75.hex}}'
+    blue: '#{{blue.p75.hex}}'
+    magenta: '#{{magenta.p75.hex}}'
+    cyan: '#{{cyan.p75.hex}}'
+    white: '#{{foreground.p75.hex}}'

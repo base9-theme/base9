@@ -1,0 +1,19 @@
+app:
+  name: Kitty
+  link: https://sw.kovidgoyal.net/kitty/
+type: terminal
+screenshots:
+- title: "282828-ebdbb2-83a598-8ec07c-fe8019-fabd2f-b8bb26-d3869b-fb4934"
+  link: "https://user-images.githubusercontent.com/2196866/180879121-6bdb8bda-07f9-4041-a36c-e30e23fd0a8c.png"
+installation:
+- write_template: true
+  template: kitty/default.conf.mustache
+  destination: ~/.config/kitty/base9.yml
+  before_md: |
+    Make sure `~/.config/kitty/kitty.conf` has the following:
+    ```
+    include base9.conf
+    ```
+  after_md: ""
+  
+

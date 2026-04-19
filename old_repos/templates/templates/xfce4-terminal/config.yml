@@ -1,0 +1,16 @@
+app:
+  name: xfce4-terminal
+  link: https://docs.xfce.org/apps/terminal/start
+type: terminal
+description: Use `with_cursor.theme.mustache` if you don't like inverted color cursor.
+installation:
+- write_template: true
+  template: xfce4-terminal/default.yml.mustache
+  destination: ~/.local/share/xfce4/terminal/colorschemes/base9.theme
+
+  before_md: ""
+  after_md: |
+    Every time theme is changed, open xfce4-terminal and go to
+
+    Edit > Preference > Colors > Presets > Select `Base9`
+

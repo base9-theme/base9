@@ -1,0 +1,13 @@
+# Base9 Templates
+
+List of all supported apps for Base9:
+
+{{#tags}}
+<details>
+<summary>{{name}}</summary>
+
+{{#list}}
+- [{{{app.name}}}]({{#external}}{{{link}}}{{/external}}{{^external}}./templates/{{app.key}}{{/external}}) {{#beta}}(in Beta){{/beta}}
+{{/list}}
+</details>
+{{/tags}}

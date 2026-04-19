@@ -1,0 +1,13 @@
+app:
+  name: iTerm2
+  link: https://iterm2.com/
+type: terminal
+installation:
+- write_template: true
+  template: iterm2/default.itermcolors.mustache
+  destination: ~/Downloads/base9.itermcolors
+  after_md: |
+    Go to Iterm2 - > Settings -> Profiles -> Colors -> Color Presets -> Import
+
+    Select the generated file from ~/Downloads/base9.itermcolors
+

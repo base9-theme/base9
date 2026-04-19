@@ -1,0 +1,42 @@
+[colors]
+{{#ansi}}
+ansi = [
+    '#{{c0.hex}}',
+    '#{{c1.hex}}',
+    '#{{c2.hex}}',
+    '#{{c3.hex}}',
+    '#{{c4.hex}}',
+    '#{{c5.hex}}',
+    '#{{c6.hex}}',
+    '#{{c7.hex}}',
+]
+background = '#{{background.hex}}'
+brights = [
+    '#{{c8.hex}}',
+    '#{{c9.hex}}',
+    '#{{ca.hex}}',
+    '#{{cb.hex}}',
+    '#{{cc.hex}}',
+    '#{{cd.hex}}',
+    '#{{ce.hex}}',
+    '#{{cf.hex}}',
+]
+{{/ansi}}
+cursor_bg = '#{{cursor.p100.hex}}'
+cursor_border = '#{{cursor.p100.hex}}'
+cursor_fg = '#{{background.hex}}'
+foreground = '#{{foreground.p100.hex}}'
+selection_bg = '#{{selection.p75.hex}}'
+selection_fg = '#{{background.hex}}'
+
+[colors.tab_bar]
+# TODO(CONTRIB): This does not work, what's wrong?
+# Add more styles?
+# background = '#{{red.p100.hex}}'
+# active_tab = { bg_color = "#{{red.p100.hex}}", fg_color = "#{{red.p100.hex}}" }
+
+[colors.indexed]
+
+[metadata]
+name = 'Base9'
+origin_url = 'https://github.com/base9-theme/base9-templates/tree/main/templates/wezterm'

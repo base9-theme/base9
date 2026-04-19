@@ -1,0 +1,108 @@
+# $schema: https://json-schema.org/draft/2020-12/schema
+type: object
+required: [app, type, installation]
+additionalProperties: false
+properties:
+  app:
+    type: object
+    required: [name, link]
+    description: info related to the app itself
+    properties:
+      name:
+        type: string
+        examples: [Alacritty]
+        description: Name of the app
+      link:
+        type: string
+        # format: uri
+        examples: [https://github.com/alacritty/alacritty]
+        description: official link of the app
+  type:
+    type: string
+    enum: [terminal,editor,gui,library]
+    description: |
+      `terminal`: if the app is a terminal emulator
+      `editor`: if the app is a code editor
+      `gui`: if the app is a general desktop app, a desktop environment, or a window manager
+      `library`: if the app is a library.
+  description:
+    type: string
+  external:
+    type: object
+    required: [link]
+    properties:
+      link:
+        type: string
+        # format: uri
+        description: link to the actual template repo
+        examples:
+        - https://github.com/base9-theme/base9-templates/tree/main/templates/alacritty
+  beta:
+    const: true
+    description: true if the theme is not super polished and needs contributions.
+
+  screenshots:
+    type: array
+    items:
+      type: object
+      required: [title, link]
+      properties:
+        title:
+          type: string
+          # maxLength: 40
+        link:
+          type: string
+          # format: uri
+
+  installation:
+    type: array
+    minItems: 1
+    items:
+      type: object
+      unevaluatedProperties: false
+      required: []
+      properties:
+        title:
+          type: string
+          maxLength: 40
+        before_md:
+          type: string
+          description: >
+            Markdown put at the begining of the installation section.
+            Use `111111-222222-333333-444444-555555-666666-777777-888888-999999` for example template,
+            as it could be replaced by actual palette when apropriate.
+        after_md:
+          type: string
+          description: >
+            Markdown put at the end of the installation section.
+            Use `111111-222222-333333-444444-555555-666666-777777-888888-999999` for example template,
+            as it could be replaced by actual palette when apropriate.
+      oneOf:
+      - required: [copy_palette]
+        properties:
+          copy_palette:
+            const: true
+            description: true if install requires copying palette to somewhere
+        
+      - required: [write_template, template, destination]
+        properties:
+          write_template:
+            const: true
+            description: true if install requires writing generated template to some file
+          template:
+            type: string
+            description: path relative to the template folder
+            examples: [alacritty/default.yml.mustache]
+          destination:
+            type: string
+            description: path of the file to write template to
+            examples: [~/.config/alacritty/base9.yml]
+      - required: [copy_template, template]
+        properties:
+          copy_template:
+            const: true
+            description: true if install requires copying generated template to somewhere
+          template:
+            type: string
+            description: path relative to the template folder
+            examples: [alacritty/default.yml.mustache]

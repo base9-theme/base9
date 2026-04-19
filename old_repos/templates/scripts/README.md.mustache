@@ -1,0 +1,51 @@
+# Base9 theme for [{{{app.name}}}]({{{app.link}}}).
+{{#beta}}
+It is currently in Beta, so not everything is finished. Contribution welcomed.
+{{/beta}}
+{{{description}}}
+{{#external}}
+For more info, go to {{{link}}}
+{{/external}}
+
+<details {{^screenshots}}style="display: none;"{{/screenshots}}>
+<summary>View screenshots</summary>
+{{#screenshots}}
+{{title}}
+<img src="{{{link}}}"/>
+{{/screenshots}}
+</details>
+
+## Installation
+{{#installation}}
+{{#title}}### {{.}}{{/title}}
+
+{{{before_md}}}
+
+{{#write_template}}
+Set your Base9 palette code to shell:
+```bash
+BASE9_PALETTE="282828-ebdbb2-83a598-8ec07c-fe8019-fabd2f-b8bb26-d3869b-fb4934"
+```
+
+Generate theme and copy to {{app.name}}'s config:
+```bash
+curl -L https://github.com/base9-theme/base9-builder/releases/download/0.1/base9-builder --output base9-builder
+chmod +x base9-builder
+
+curl -L \
+https://raw.githubusercontent.com/base9-theme/base9-templates/main/templates/{{{template}}} \
+--output base9.mustache
+
+DESTINATION={{{destination}}}
+./base9-builder render $BASE9_PALETTE base9.mustache $DESTINATION
+```
+
+Clean up:
+```bash
+rm base9-builder
+rm base9.mustache
+```
+{{/write_template}}
+
+{{{after_md}}}
+{{/installation}}

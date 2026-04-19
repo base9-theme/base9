@@ -1,0 +1,15 @@
+app:
+  name: Visual Studio Code
+  link: https://code.visualstudio.com/
+type: editor
+external:
+  link: https://github.com/base9-theme/base9-vscode
+installation:
+- copy_palette: true
+  before_md: |
+    Install [base9-vscode](https://marketplace.visualstudio.com/items?itemName=base9-theme.base9-vscode)
+
+    Set color theme to `base9`
+  after_md: Set palette in setting `base9.palette`.
+
+

@@ -1,0 +1,11 @@
+app:
+  name: CSS 
+  link: https://www.w3.org/Style/CSS
+description: |
+  CSS file with all base9 colors in css variable.
+type: library
+installation:
+- write_template: true
+  template: css/default.css.mustache
+  destination: base9.css
+
