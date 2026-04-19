@@ -1,0 +1,13 @@
+@media screen {
+  
+}
+div:hover {
+  background: #FF0000;
+  border-top-color: red;
+  border-left-color: green;
+  border-right-color: black;
+  border-bottom-color: rgb(255,0,0);
+}
+.class1 > #id1 {
+  border: --var(--x);
+}
